@@ -52,7 +52,7 @@
                   <span v-else>未啟用</span>
                 </td>
                 <td width="120">
-                  <button type="button" class="btn btn-primary" @click="template=item">
+                  <button type="button" class="btn btn-primary" @click="tempProduct=item">
                     查看細節
                   </button>
                 </td>
@@ -63,26 +63,26 @@
         </div>
         <div class="col-md-6">
           <h2>單一產品細節</h2>
-          <div v-if="template.title">
+          <div v-if="tempProduct.title">
             <div class="card mb-3">
-              <img :src="template.imageUrl" class="card-img-top primary-image" alt="主圖" />
+              <img :src="tempProduct.imageUrl" class="card-img-top primary-image" alt="主圖" />
               <div class="card-body">
                 <h5 class="card-title">
-                  {{template.title}}
-                  <span class="badge bg-primary ms-2">{{template.category}}</span>
+                  {{tempProduct.title}}
+                  <span class="badge bg-primary ms-2">{{tempProduct.category}}</span>
                 </h5>
-                <p class="card-text">商品描述：{{template.description}}</p>
-                <p class="card-text">商品內容：{{template.content}}</p>
+                <p class="card-text">商品描述：{{tempProduct.description}}</p>
+                <p class="card-text">商品內容：{{tempProduct.content}}</p>
                 <div class="d-flex">
-                  <p class="card-text me-2">{{template.price}}</p>
+                  <p class="card-text me-2">{{tempProduct.price}}</p>
                   <p class="card-text text-secondary">
-                    <del>{{template.origin_price}}</del>
+                    <del>{{tempProduct.origin_price}}</del>
                   </p>
-                  元 / {{template.unit}}
+                  元 / {{tempProduct.unit}}
                 </div>
               </div>
             </div>
-            <span v-for="item in template.imagesUrl">
+            <span v-for="item in tempProduct.imagesUrl" :key="item">
               <img :src="item" alt="" class="images m-2" />
             </span>
           </div>

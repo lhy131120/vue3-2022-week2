@@ -8,8 +8,8 @@ const app = {
     return {
       url: 'https://vue3-course-api.hexschool.io',
       api_path: 'sakimotorin-vue2022',
-      products: [],
-      template: {},
+      products: '',
+      tempProduct: {},
     };
   },
   methods: {

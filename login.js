@@ -1,7 +1,6 @@
 import { createApp } from 'https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.45/vue.esm-browser.min.js';
 
 const url = 'https://vue3-course-api.hexschool.io';
-const api_path = 'sakimotorin-vue2022';
 
 const app = {
   // data
@@ -29,7 +28,6 @@ const app = {
           window.location = './products.html'
         })
         .catch(err=>{
-          console.log(err.data);
           alert(err.data.error.code)
           this.clearInputVal();
         })
@@ -38,10 +36,6 @@ const app = {
       this.users.username = '';
       this.users.password = '';
     }
-  },
-  // 生命週期
-  mounted(){
-    console.log('Start Vue Function');
   }
 }
 
